@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 1 - WebGL Paint App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    #webgl {
+      border: 1px solid black;
+      background: white;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+
+    .control-group {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px 12px;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      margin: 4px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    #note, #reference {
+      background: white;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+
+    #reference img {
+      max-width: 300px;
+      border: 1px solid #aaa;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body onload="main()">
+  <h1>WebGL Paint App</h1>
+  <p>Brushes: Point, Triangle, Circle. Drag to paint. Use the Draw Picture button to display my triangle artwork.</p>
+
+  <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports canvas.
+  </canvas>
+
+  <div class="controls">
+    <div class="control-group">
+      <strong>Brush Type</strong><br />
+      <button id="pointButton">Point</button>
+      <button id="triangleButton">Triangle</button>
+      <button id="circleButton">Circle</button>
+      <button id="clearButton">Clear Canvas</button>
+      <button id="drawPictureButton">Draw Picture</button>
+    </div>
+
+    <div class="control-group">
+      <strong>Color</strong>
+      <label>
+        Red
+        <input type="range" id="redSlide" min="0" max="100" value="100" />
+      </label>
+      <label>
+        Green
+        <input type="range" id="greenSlide" min="0" max="100" value="0" />
+      </label>
+      <label>
+        Blue
+        <input type="range" id="blueSlide" min="0" max="100" value="0" />
+      </label>
+    </div>
+
+    <label>
+        Alpha
+        <input type="range" id="alphaSlide" min="0" max="100" value="100" />
+    </label>
+
+    <div class="control-group">
+      <strong>Brush Size</strong>
+      <label>
+        Size
+        <input type="range" id="sizeSlide" min="5" max="40" value="12" />
+      </label>
+    </div>
+
+    <div class="control-group">
+      <strong>Circle Smoothness</strong>
+      <label>
+        Segments
+        <input type="range" id="segmentSlide" min="3" max="40" value="12" />
+      </label>
+    </div>
+  </div>
+
+  <p><strong>Awesome feature:</strong> This paint program supports transparent painting using an alpha slider, so overlapping strokes blend together like real paint.</p>
+
+  <div id="reference">
+    <strong>Reference sketch photo:</strong>
+    <p>Replace the image below with a photo of your own paper sketch to meet the assignment requirement.</p>
+    <img src="sketch-placeholder.png" alt="Replace with your own sketch photo" />
+  </div>
+
+  <script src="Point.js"></script>
+  <script src="Triangle.js"></script>
+  <script src="Circle.js"></script>
+  <script src="ColoredPoints.js"></script>
+</body>
+</html>
