@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Koala Animal</title>
+</head>
+
+<body onload="main()">
+  <canvas id="webgl" width="600" height="600"></canvas>
+
+  <p id="fps">FPS: --</p>
+
+  <p>
+    Global Rotation:
+    <input type="range" min="-180" max="180" value="0" id="angleSlide">
+  </p>
+
+  <p>
+    Left Leg:
+    <input type="range" min="-45" max="45" value="0" id="leftLegSlide">
+  </p>
+
+  <p>
+    Left Knee:
+    <input type="range" min="-45" max="45" value="0" id="leftKneeSlide">
+  </p>
+
+  <p>
+    Animation:
+    <button onclick="gAnimation = true">ON</button>
+    <button onclick="gAnimation = false">OFF</button>
+  </p>
+
+  <p>
+    Mouse drag = rotate koala<br>
+    Shift + Click = explode koala
+  </p>
+
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix-cse160.js"></script>
+
+  <script src="Cube.js"></script>
+  <script src="Cylinder.js"></script>
+  <script src="Koala.js"></script>
+  <script src="asg2.js"></script>
+</body>
+</html>
