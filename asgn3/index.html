@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dylan Fang - Assignment 4 Polished World</title>
+  <style>
+    body { margin: 0; background: #101820; color: white; font-family: Arial, sans-serif; overflow: hidden; }
+    #webgl { display: block; margin: 0 auto; width: 100vw; height: 100vh; background: #87ceeb; }
+    #hud {
+      position: fixed; left: 14px; top: 12px; padding: 12px 14px;
+      background: rgba(0,0,0,0.55); border-radius: 10px; line-height: 1.45;
+      font-size: 14px; max-width: 370px;
+    }
+    #story { color: #ffeaa7; font-weight: bold; }
+  </style>
+</head>
+<body onload="main()">
+  <canvas id="webgl" width="1920" height="1080"></canvas>
+  <div id="hud">
+    <div><b>Koala Forest Rescue</b></div>
+    <div id="fps">FPS: --</div>
+    <div id="story">Collect 4 glowing leaf crystals, return to the Life Tree, and protect the Koala Grove.</div>
+    <div>WASD move | Q/E turn | Click + drag mouse to look in any direction</div>
+    <div>Space fly up | Shift fly down | F add block | R remove block | Collect all crystals to win</div>
+  </div>
+
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix-cse160.js"></script>
+
+  <script src="Camera.js"></script>
+  <script src="Cube.js"></script>
+  <script src="Cylinder.js"></script>
+  <script src="Koala.js"></script>
+  <script src="asg4.js"></script>
+</body>
+</html>
