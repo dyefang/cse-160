@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 5 - Lunar Research Outpost</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <div id="info">
+    <h1>Lunar Research Outpost</h1>
+    <p>Mouse drag = rotate camera | Scroll = zoom | Right click drag = pan</p>
+    <p><b>Wow Point:</b> animated glowing energy crystals, orbiting drone satellites, fog, shadows, and a custom textured UFO glTF model.</p>
+    <p id="status">Loading scene...</p>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
